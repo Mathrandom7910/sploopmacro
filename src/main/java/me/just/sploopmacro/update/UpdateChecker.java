@@ -13,7 +13,7 @@ public class UpdateChecker {
     public boolean outDated = false;
     private ModInfo mInfObj;
 
-    private static final String INFO_URL = "https://raw.githubusercontent.com/Justgamer101/sploopmacro/main/info.json";
+    private static final String INFO_URL = "https://raw.githubusercontent.com/Justgamer101/sploopmacro/info.json";
     public UpdateChecker(){
         String modInf = GetPageData.page(INFO_URL);
         if(modInf != null){
@@ -25,7 +25,7 @@ public class UpdateChecker {
 
             }
         } else {
-            System.out.println("Errorwith page");
+            System.out.println("Error with page");
         }
     }
 
