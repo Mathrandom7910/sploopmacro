@@ -6,6 +6,6 @@ import java.awt.event.KeyEvent;
 
 public class Food extends Placer {
     public Food(){
-        super(KeyEvent.VK_2);
+        super(KeyEvent.VK_3);
     }
 }
