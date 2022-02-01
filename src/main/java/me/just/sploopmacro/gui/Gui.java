@@ -92,8 +92,12 @@ public class Gui extends JFrame {
         if(SploopMacro.checker.outDated) {
             System.out.println("client outdated, prompting");
 
-            JOptionPane.showMessageDialog(null, "SploopHack v2 is outdated!\nClose out to open releases page", "SploopHack Updater", JOptionPane.INFORMATION_MESSAGE);
+            info("SploopHack v2 is outdated!\nClose out to open releases page", "SploopHack Updater");
         }
+    }
+
+    public void info(String text, String title) {
+        JOptionPane.showMessageDialog(null, text, title, JOptionPane.INFORMATION_MESSAGE);
     }
 
     private class LoopTickDelListener implements ChangeListener {

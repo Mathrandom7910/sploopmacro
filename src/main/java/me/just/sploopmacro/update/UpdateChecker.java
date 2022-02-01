@@ -11,7 +11,7 @@ import java.net.URISyntaxException;
 
 public class UpdateChecker {
     public boolean outDated = false;
-    private ModInfo mInfObj;
+    public ModInfo mInfObj;
 
     private static final String INFO_URL = "https://raw.githubusercontent.com/Justgamer101/sploopmacro/master/info.json";
     public UpdateChecker(){
@@ -38,7 +38,7 @@ public class UpdateChecker {
         }
     }
 
-    private class ModInfo {
+    public class ModInfo {
         public String version;
         public String latestRelease;
     }

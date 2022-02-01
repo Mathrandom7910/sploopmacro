@@ -3,6 +3,7 @@ package me.just.sploopmacro;
 import lc.kra.system.keyboard.GlobalKeyboardHook;
 import lc.kra.system.keyboard.event.GlobalKeyAdapter;
 import lc.kra.system.keyboard.event.GlobalKeyEvent;
+import me.just.sploopmacro.file.FileHndler;
 import me.just.sploopmacro.gui.Gui;
 import me.just.sploopmacro.keyboard.objectplace.obj.*;
 import me.just.sploopmacro.update.UpdateChecker;
@@ -29,7 +30,10 @@ public class SploopMacro {
     private static Integer[] keyDetection = new Integer[]{GlobalKeyEvent.VK_V, GlobalKeyEvent.VK_F, GlobalKeyEvent.VK_N, GlobalKeyEvent.VK_H, GlobalKeyEvent.VK_Q};
     public static void main(String[] args){
 
-
+            FileHndler.init();
+            if(FileHndler.isFirstRun) {
+                gui.info("Thanks for using this... ig\nIf you installed this from any other place besides\n" + checker.mInfObj.latestRelease + "\nYou could be in danger! (of a virus, malware, etc)", "First Run Info");
+            }
 
             keyboardHook = new GlobalKeyboardHook(true);
 
