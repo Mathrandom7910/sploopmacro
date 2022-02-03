@@ -1,4 +1,4 @@
-#SPLOOPHACK
+# SPLOOPHACK V2
 
 SploopHack v2, since v1 required windows 64 bit. This *should be able to run on more devices (java required)
 
