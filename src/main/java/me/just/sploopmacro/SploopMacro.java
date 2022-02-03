@@ -25,12 +25,12 @@ public class SploopMacro {
     private static SpecialObj special = new SpecialObj();
     private static Food food = new Food();
 
-    private static Gui gui = new Gui();
 
     private static Integer[] keyDetection = new Integer[]{GlobalKeyEvent.VK_V, GlobalKeyEvent.VK_F, GlobalKeyEvent.VK_N, GlobalKeyEvent.VK_H, GlobalKeyEvent.VK_Q};
     public static void main(String[] args){
 
             FileHndler.init();
+            Gui gui = new Gui();
             if(FileHndler.isFirstRun) {
                 gui.info("Thanks for using this... ig\nIf you installed this from any other place besides\n" + checker.mInfObj.latestRelease + "\nYou could be in danger! (of a virus, malware, etc)", "First Run Info");
             }

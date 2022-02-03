@@ -22,7 +22,6 @@ public class UpdateChecker {
             mInfObj = gson.fromJson(modInf, ModInfo.class);
             if(!mInfObj.version.equals(SploopMacro.MACRO_VERSION)){
                 outDated = true;
-
             }
         } else {
             System.out.println("Error with page");
@@ -30,7 +29,6 @@ public class UpdateChecker {
     }
 
     public void browsePage(){
-
         try {
             Desktop.getDesktop().browse(new URI(mInfObj.latestRelease));
         } catch (IOException | URISyntaxException e) {

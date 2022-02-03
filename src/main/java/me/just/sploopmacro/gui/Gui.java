@@ -1,6 +1,9 @@
 package me.just.sploopmacro.gui;
 
+import com.google.gson.Gson;
 import me.just.sploopmacro.SploopMacro;
+import me.just.sploopmacro.file.Configs;
+import me.just.sploopmacro.file.FileHndler;
 
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
@@ -16,6 +19,8 @@ public class Gui extends JFrame {
     private JLabel loopLabel;
     private JLabel placeLabel;
 
+    private Configs configs = new Configs();
+    //private Configs cfgSetting = new Gson().fromJson(FileHndler.config);
 
     public boolean guiOpen = true;
 
@@ -84,7 +89,7 @@ public class Gui extends JFrame {
 
     private void initGui(){
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
-        setSize(400, 250);
+        setSize(400, 200);
         setLocation(400, 300);
         setIconImage(new ImageIcon(ClassLoader.getSystemResource("img/sploop.png")).getImage());
         setVisible(true);
