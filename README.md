@@ -15,4 +15,6 @@ logo not by me
 ## How to build:
 
 download the zip file in releases, unzip, open command prompt there. Run `./gradlew build`
-check the build/libs folder if that wont work just try `gradlew build` in command prompt
+
+check the build/libs folder for the jar, if that won't work try `./gradlew.bat build` 
+in command prompt
