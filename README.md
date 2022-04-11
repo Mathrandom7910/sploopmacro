@@ -1,20 +1,11 @@
-# SPLOOPHACK V2
+# SPLOOPMACRO
 
-SploopHack v2, since v1 required windows 64 bit. This *should be able to run on more devices (java required)
-
-If you get banned, not my fault. I do not encourage use cheats/hacks/exploits to gain an advantage on sploop.io. This is simply for educational purposes. You can get a pre-built binary over there (under releases tab) ->
-
-Download jar and double click to run!
-
-Bye .io games
-
-![Sploop_Logo](https://raw.githubusercontent.com/Justgamer101/sploopmacro/master/src/main/resources/img/sploop.png)
+SploopMacro v2, since v1 required windows 64 bit. This *should be able to run on more devices (java required)
 
 logo not by me
 
 ## How to build:
 
-download the zip file in releases, unzip, open command prompt there. Run `./gradlew build`
+download the zip file in releases, unzip, open command prompt there. For windows, run `./gradlew build`, and linux, run `gradlew build`
 
-check the build/libs folder for the jar, if that won't work try `./gradlew.bat build` 
-in command prompt
+check the build/libs folder for the jar
