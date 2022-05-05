@@ -1,3 +1,4 @@
+[![Github All Releases](https://img.shields.io/github/downloads/Mathrandom7910/sploopmacro/total.svg)]()
 # SPLOOPMACRO
 
 SploopMacro v2, since v1 required windows 64 bit. This *should be able to run on more devices (java required)
