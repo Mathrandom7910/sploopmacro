@@ -5,6 +5,7 @@ import lc.kra.system.keyboard.event.GlobalKeyAdapter;
 import lc.kra.system.keyboard.event.GlobalKeyEvent;
 import me.just.sploopmacro.file.FileHndler;
 import me.just.sploopmacro.gui.Gui;
+import me.just.sploopmacro.keyboard.KeyDown;
 import me.just.sploopmacro.keyboard.objectplace.obj.*;
 import me.just.sploopmacro.update.UpdateChecker;
 
@@ -16,6 +17,7 @@ public class SploopMacro {
     public static final String MACRO_VERSION = "1";
     private static boolean running = true;
     private static GlobalKeyboardHook keyboardHook;
+    public static KeyDown keyDown = KeyDown.NUM_1;
 
     public static UpdateChecker checker = new UpdateChecker();
 
@@ -49,6 +51,12 @@ public class SploopMacro {
                     if (e.getVirtualKeyCode() == GlobalKeyEvent.VK_ESCAPE) {
                         System.out.println("Escape key pressed, stopping");
                         running = false;
+                    }
+
+                    if(e.getVirtualKeyCode() == GlobalKeyEvent.VK_1) {
+                        keyDown = KeyDown.NUM_1;
+                    } else if(e.getVirtualKeyCode() == GlobalKeyEvent.VK_2) {
+                        keyDown = KeyDown.NUM_2;
                     }
 
                     keysPressed.put(e.getVirtualKeyCode(), true);
