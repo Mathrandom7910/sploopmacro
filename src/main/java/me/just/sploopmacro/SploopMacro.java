@@ -14,7 +14,7 @@ import java.util.HashMap;
 
 //built different
 public class SploopMacro {
-    public static final String MACRO_VERSION = "1";
+    public static final String MACRO_VERSION = "1.2";
     private static boolean running = true;
     private static GlobalKeyboardHook keyboardHook;
     public static KeyDown keyDown = KeyDown.NUM_1;
