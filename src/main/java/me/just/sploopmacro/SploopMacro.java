@@ -49,8 +49,10 @@ public class SploopMacro {
                 @Override
                 public void keyPressed(GlobalKeyEvent e) {
                     if (e.getVirtualKeyCode() == GlobalKeyEvent.VK_ESCAPE) {
-                        System.out.println("Escape key pressed, stopping");
-                        running = false;
+                        System.out.println("Escape key pressed, resuming");
+                        running = true;
+                    } else if (e.getVirtualKeyCode() == GlobalKeyEvent.VK_END) {
+                        running = !running;
                     }
 
                     if(e.getVirtualKeyCode() == GlobalKeyEvent.VK_1) {
@@ -70,7 +72,8 @@ public class SploopMacro {
 
             System.out.println("SploopHack v2 ready");
             try {
-                while (running && gui.guiOpen) {
+                while (gui.guiOpen) {
+                    if(!running) continue;
                     if (gui.loopTickDel != 0) Thread.sleep(gui.loopTickDel);
                     if (keysPressed.get(GlobalKeyEvent.VK_V)) {
                         spike.place(gui.placeDel);

@@ -97,7 +97,7 @@ public class Gui extends JFrame {
         if(SploopMacro.checker.outDated) {
             System.out.println("client outdated, prompting");
 
-            info("SploopHack v2 is outdated!\nClose out to open releases page", "SploopHack Updater");
+            info("SploopHack v2 is outdated!\nClose out to open releases page\nCurrent version: " + SploopMacro.MACRO_VERSION + "\nServer version: " + SploopMacro.checker.mInfObj.version, "SploopHack Updater");
         }
     }
 
